@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <% include head %>
+    <title>Planificare Consultanta</title>
+
+  </head>
+  <body>
+    <header>
+        <% include menu %>
+    </header>
+    <main>
+        <div class="container-planificare">
+            <h2>Date de contact:</h2>
+          
+            <form  method="post" action="/sedinta" >
+                <div class="row">
+                    <div class="column">
+                        <input type = "text" name="name" id="name"  placeholder="Nume">
+                    </div>
+                    <div class="column">
+                        <input type ="text" name="fname" id="fname" placeholder="Prenume">
+                    </div>
+                </div>
+                <div class="row">
+                    <input type="email" name="email" id="email"  placeholder="Email">
+                </div>
+                <div class="row">
+                    <input type="tel" name="phone" id="phone" placeholder="Telefon">
+                </div>
+                <div class="row">
+                    <button type="submit" onclick = "saveDate()" id="submitDetails" name="submitDetails" value="Submit">Confirma</button>
+                </div>
+
+            </form>
+            <!-- <a href="/view-feedbacks">View feedbacks</a> -->
+        </div>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2848.664833789215!2d26.02646941565149!3d44.44003697910213!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40b201a4d59182cd%3A0xfb913a5485f0ab6!2sIntrarea%20Mecanicilor%2013%2C%20Bucure%C8%99ti%20077042!5e0!3m2!1sen!2sro!4v1577449282776!5m2!1sen!2sro"frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+      <div class="container-planificare">
+        <h1>Calendar</h1>
+         <div class="card">
+           <h3 class="card-header" id="monthAndYear"></h3>
+           <table class="table table-bordered table-responsive-sm table-responsive-md" id="calendar">
+             <thead>
+               <tr>
+                 <th>Luni</th>
+                 <th>Marti</th>
+                 <th>Miercuri</th>
+                 <th>Joi</th>
+                 <th>Vineri</th>
+                 <th>Sambata</th>
+                 <th>Duminica</th>  
+               </tr>
+             </thead>
+             <tbody id="calendar-body"></tbody>
+           </table>
+         </div>
+         <div class="row">
+          <button type="button" onclick="previous()">Anterior</button>
+          <button type="button" onclick="next()">Urmator</button>
+         </div>
+      
+      </div>
+  
+    </main>
+    <footer>
+      <% include footer %>
+    </footer>
+    <script src="js/calendar.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  </body>
+</html>
