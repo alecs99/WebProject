@@ -16,7 +16,7 @@
     "express-favicon": "^2.0.1",
     "express-session": "^1.17.0",
     "formidable": "^1.2.1",
-    "handlebars": "^4.7.1",
+    "handlebars": "^4.7.7",
     "http-errors": "~1.6.3",
     "mongoose": "^5.8.7",
     "morgan": "~1.9.1",
